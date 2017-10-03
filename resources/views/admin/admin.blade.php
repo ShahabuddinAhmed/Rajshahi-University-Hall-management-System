@@ -21,7 +21,7 @@
                         <div>
                             <ul class = "Left1">
                                 <li class = "Left2">
-                                    <a class = "Left3" href="UpdateNoticeBoard"> Add Notice </a>
+                                    <a class = "Left3" href="/addnotice"> Add Notice </a>
                                 </li>
                                 <li class = "Left2">
                                     <a class = "Left3" href="Ntctm.php"> Delete Notice Board </a>

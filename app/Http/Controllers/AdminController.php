@@ -85,6 +85,11 @@ class AdminController extends Controller
         return view('admin.updateContact');
     }
 
+    public function addNotice()
+    {
+        return view('admin.addNotice');
+    }
+
 
 
 

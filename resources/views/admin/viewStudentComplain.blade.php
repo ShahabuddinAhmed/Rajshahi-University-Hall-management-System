@@ -120,29 +120,7 @@
 
         <div class="container">
 
-        <?php
-            include 'dbconnect.php';
-            $sql = "SELECT * FROM complain";
-                $result = $conn->query($sql);
-                if($result->num_rows>0){
-                    while($row = $result->fetch_assoc()) {
-                        echo'
-                        <div class="cls_ntc ">
-                        <br>
-                        <p>'.$row["StuID"].'</p>
-                        <p>'.$row["Complain"].'</p>
-
-                        <br>
-                        <br>                
-                    </div>
-                    <br>
-                    ';
-                    }
-                }else{
-                    echo'No Notice';
-                }
-                $conn->close();
-        ?>
+        
 
         </div>
     </body>
