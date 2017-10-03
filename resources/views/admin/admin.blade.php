@@ -24,7 +24,7 @@
                                     <a class = "Left3" href="/addnotice"> Add Notice </a>
                                 </li>
                                 <li class = "Left2">
-                                    <a class = "Left3" href="Ntctm.php"> Delete Notice Board </a>
+                                    <a class = "Left3" href="/deletenotice"> Delete Notice Board </a>
                                 </li>
                                 <li class = "Left2">
                                     <a class = "Left3" href="/updateadministration"> Update Administration </a>
