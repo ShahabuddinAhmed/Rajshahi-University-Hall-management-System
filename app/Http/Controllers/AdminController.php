@@ -90,6 +90,11 @@ class AdminController extends Controller
         return view('admin.addNotice');
     }
 
+    public function deleteNotice()
+    {
+        return view('admin.deleteNoticeBoard');
+    }
+
 
 
 

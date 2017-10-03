@@ -48,6 +48,8 @@ Route::get('studentpayment', 'AdminController@studentPayment');
 Route::get('updatestudentinformation', 'AdminController@updateStudentInformation');
 Route::get('updatecontact', 'AdminController@updateContact');
 Route::get('addnotice', 'AdminController@addNotice');
+Route::get('deletenotice', 'AdminController@deleteNotice');
+
 
 
 
