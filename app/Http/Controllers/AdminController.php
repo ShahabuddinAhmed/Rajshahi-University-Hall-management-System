@@ -3,8 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\StudentModel;
-use App\Info;
+use App\StudentInfo;
+use App\Information;
+use App\emergency_contact;
+use App\HouseTutor;
+use App\HallStuff;
+use App\HallMosque;
+use App\StudentComplain;
+use App\Notice;
 
 class AdminController extends Controller
 {
@@ -67,7 +73,8 @@ class AdminController extends Controller
 
     public function viewStudentComplain()
     {
-        return view('admin.viewStudentComplain');
+        $complains = StudentComplain::all();
+        return view('admin.viewStudentComplain', compact('complains'));
     }
 
     public function studentPayment()
@@ -98,10 +105,102 @@ class AdminController extends Controller
 
 
 
-
-
-
     /* Here All Post Method Routes */
+    public function postUpdateAdministration(Request $request)
+    {
+        $id = 1;
+        $Information = Information::find($id);
+        $Information->administration = $request['info'];
+        $Information->save();
+        return redirect('/admin');
+    }
+
+    public function postUpdateLibrary(Request $request)
+    {
+        $id = 1;
+        $Information = Information::find($id);
+        $Information->library = $request['info'];
+        $Information->save();
+        return redirect('/admin');
+    }
+
+    public function postUpdateDining(Request $request)
+    {
+        $id = 1;
+        $Information = Information::find($id);
+        $Information->dining = $request['info'];
+        $Information->save();
+        return redirect('/admin');
+    }
+
+    public function postUpdateCanteen(Request $request)
+    {
+        $id = 1;
+        $Information = Information::find($id);
+        $Information->canteen = $request['info'];
+        $Information->save();
+        return redirect('/admin');
+    }
+
+    public function postUpdateContact(Request $request)
+    {
+        $id = 1;
+        $Information = Information::find($id);
+        $Information->contact = $request['info'];
+        $Information->save();
+        return redirect('/admin');
+    }
+
+    public function postAbout(Request $request)
+    {
+        $id = 1;
+        $Information = Information::find($id);
+        $Information->about = $request['info'];
+        $Information->save();
+        return redirect('/admin');
+    }
+
+    public function postUpdateEmergencyContact(Request $request)
+    {
+        $id = $request['abc'];
+        $contact = emergency_contact::find($id);
+        $contact->name = $request['t_name'];
+        $contact->phon = $request['t_phon'];
+        $contact->save();
+        return redirect('/admin');
+    }
+
+    public function postUpdateHouseTutor(Request $request)
+    {
+        $id = $request['abc'];
+        $contact = HouseTutor::find($id);
+        $contact->name = $request['t_name'];
+        $contact->info = $request['info'];
+        $contact->save();
+        return redirect('/admin');
+    }
+
+    public function postUpdateHallStuff(Request $request)
+    {
+        $id = $request['abcd'];
+        $contact = HallStuff::find($id);
+        $contact->name = $request['t_name'];
+        $contact->phon = $request['t_phon'];
+        $contact->info = $request['about'];
+        $contact->save();
+        return redirect('/admin');
+    }
+
+    public function postUpdateHallMosque(Request $request)
+    {
+        $id = $request['abcd'];
+        $contact = HallMosque::find($id);
+        $contact->info = $request['info'];
+        $contact->save();
+        return redirect('/admin');
+    }
+
+
     public function postAdmitStudent(Request $request)
     {
         
@@ -120,7 +219,7 @@ class AdminController extends Controller
 
 
 
-        $studentInfo = new StudentModel;
+        $studentInfo = new StudentInfo;
         $studentInfo->id = $request['id'];
         $studentInfo->name = $name;
         $studentInfo->dept = $request['dept'];
@@ -133,15 +232,16 @@ class AdminController extends Controller
         $studentInfo->birthDay = $request['birthDay'];
         $studentInfo->password = $request['birthDay'];
         $studentInfo->save();
-
-        return redirect('admin');
+        return redirect('/admin');
 
     }
 
-    public function postAbout(Request $request)
+    public function postAddNotice(Request $request)
     {
-        $infos = new Info;
-        $infos->about = $request['about'];
+        $notice = new Notice;
+        $notice->notice = $request['notice'];
+        $notice->save();
+        return redirect('/admin');
     }
 
 }
