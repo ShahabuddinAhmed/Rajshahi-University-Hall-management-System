@@ -55,17 +55,30 @@ Route::get('deletenotice', 'AdminController@deleteNotice');
 
 Route::post('admitstudent', 'AdminController@postAdmitStudent');
 Route::post('about', 'AdminController@postAbout');
-Route::post('admitstudent', 'AdminController@postAdmitStudent');
-Route::post('admitstudent', 'AdminController@postAdmitStudent');
-Route::post('admitstudent', 'AdminController@postAdmitStudent');
-Route::post('admitstudent', 'AdminController@postAdmitStudent');
-Route::post('admitstudent', 'AdminController@postAdmitStudent');
-Route::post('admitstudent', 'AdminController@postAdmitStudent');
+Route::post('updateadministration', 'AdminController@postUpdateAdministration');
+Route::post('updatelibrary', 'AdminController@postUpdateLibrary');
+Route::post('updatedining', 'AdminController@postUpdateDining');
+Route::post('updatecanteen', 'AdminController@postUpdateCanteen');
+Route::post('updatecontact', 'AdminController@postUpdateContact');
+Route::post('updateemergencycontact', 'AdminController@postUpdateEmergencyContact');
+Route::post('updatehousetutor', 'AdminController@postUpdateHouseTutor');
+Route::post('updatehallstuff', 'AdminController@postUpdateHallStuff');
+Route::post('updatehallmosque', 'AdminController@postUpdateHallMosque');
+Route::post('addnotice', 'AdminController@postAddNotice');
 
 /* End All Routes for Admin's Pages */
+
+
+
+
 
 
 /* All Routes for Student's Pages  */
 Route::get('student', 'StudentController@student');
 Route::get('changepassword', 'StudentController@changePassword');
 Route::get('viewmypayment', 'StudentController@viewMyPayment');
+
+
+
+
+Route::post('student', 'StudentController@postStudent');
