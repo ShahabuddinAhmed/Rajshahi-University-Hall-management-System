@@ -44,7 +44,7 @@
 
                                 <div class="grid">
 
-                                    <form action="ViewStudentInformation.php" method="post" class="search">
+                                    <form action="/" method="post" class="search">
 
                                         <div class="form__field">
                                             <input type="search" name="abs" placeholder="Entire Student ID" class="form__input">
