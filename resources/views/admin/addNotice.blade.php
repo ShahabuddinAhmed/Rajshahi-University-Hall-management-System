@@ -102,20 +102,27 @@
     <body>
         <div class = "Top">
             <ul class = "Top1">
-                <li class = "Top2"> <?php echo '<a class = "Top4" href="HallManagementSystem.php">Home</a>';?> </li>
+                <li class = "Top2"><a class = "Top4" href="home">Home</a></li>
             </ul>
             </div>
         <div class="form">
             <div class="tab-content"> 
                 <h1>Enter Notice Information</h1>
-                <form action="AddNotice.php" method="post" name="UpdateCanteen">
+                <form action="addnotice" method="post" name="UpdateCanteen">
+                    {{csrf_field()}}
                     <div class="field-wrap">
-                        <textarea name="about" type"text" rows="15" maxlength="995">
+                        <textarea name="notice" type"text" rows="15" maxlength="995">
 
                         </textarea>
                     </div>
                     <button type="submit" class="button button-block"/>Submit</button>
                 </form>
+                @if(count($errors)>0)
+                    <div class="alert alert-warning"></div>
+                    @foreach($errors->all() as $error)
+                        {{$error}}
+                    @endforeach
+                @endif
             </div>
         </div> <!-- /form -->
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
