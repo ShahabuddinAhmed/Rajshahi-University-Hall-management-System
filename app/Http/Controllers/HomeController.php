@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Info;
+use App\Information;
+use App\Notice;
 
 class HomeController extends Controller
 {
@@ -21,13 +22,13 @@ class HomeController extends Controller
 
     public function contact()
     {
-        $infos = Info::all();
+        $infos = Information::all();
         return view('home.contact', compact('infos'));
     }
 
     public function about()
     {
-        $infos = Info::all();
+        $infos = Information::all();
         return view('home.about', compact('infos'));
     }
 
@@ -43,30 +44,31 @@ class HomeController extends Controller
 
     public function noticeBoard()
     {
-        return view('home.noticeBoard');
+        $notices = Notice::all();
+        return view('home.noticeBoard', compact('notices'));
     }
 
     public function administration()
     {
-        $infos = Info::all();
+        $infos = Information::all();
         return view('home.administration', compact('infos'));
     }
 
     public function hallLibrary()
     {
-        $infos = Info::all();
+        $infos = Information::all();
         return view('home.hallLibrary', compact('infos'));
     }
 
     public function dining()
     {
-        $infos = Info::all();
+        $infos = Information::all();
         return view('home.dining', compact('infos'));
     }
 
     public function canteen()
     {
-        $infos = Info::all();
+        $infos = Information::all();
         return view('home.canteen', compact('infos'));
     }
 
