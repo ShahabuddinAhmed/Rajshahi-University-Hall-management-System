@@ -199,7 +199,8 @@
             <div class="form">
             <div class="tab-content"> 
                 <h1>Enter Student's Complain</h1>
-                <form action="AddComplain.php" method="post" name="UpdateHallStuff">
+                <form action="/student" method="post" name="UpdateHallStuff">
+                    {{csrf_field()}}
                     <div class="field-wrap">
                         <br>
                         <textarea name="info"  type="text" rows="15" maxlength="995">
