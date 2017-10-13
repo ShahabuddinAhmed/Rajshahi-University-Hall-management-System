@@ -115,19 +115,20 @@
         <div class="form">
             <div class="tab-content"> 
                 <h1>Enter Prayer's time Information</h1>
-                <form action="UpdateHallMosqueTm.php" method="post" name="UpdateMosque">
-                    <select name="slct" class="mySelect">
+                <form action="updatehallmosque" method="post" name="UpdateMosque">
+                    {{csrf_field()}}
+                    <select name="abcd" class="mySelect">
                         <option style="color: white" value="">Select Catagory</option>
-                        <option style="color: white" value="Fajor">Fajor</option>
-                        <option style="color: white" value="Jahor">Jahor</option>
-                        <option style="color: white" value="Ashor">Ashor</option>
-                        <option style="color: white" value="Magrib">Magrib</option>
-                        <option style="color: white" value="Esha">Esha</option>
+                        <option style="color: white" value="1">Fajor</option>
+                        <option style="color: white" value="2">Jahor</option>
+                        <option style="color: white" value="3">Ashor</option>
+                        <option style="color: white" value="4">Magrib</option>
+                        <option style="color: white" value="5">Esha</option>
                     </select>
 
                     <div class="field-wrap">
                         <br>
-                        <textarea name="about" type="text" rows="15" maxlength="995">
+                        <textarea name="info" type="text" rows="15" maxlength="995">
 
                         </textarea>
                     </div>

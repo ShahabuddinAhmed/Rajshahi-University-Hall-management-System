@@ -124,7 +124,8 @@
         <div class="form">
             <div class="tab-content"> 
                 <h1>Enter House Tutor's Information</h1>
-                <form action="UpdateHouseTutorTm.php" method="post" name="UpdateHouseTutor">
+                <form action="/updatehousetutor" method="post" name="UpdateHouseTutor">
+                    {{csrf_field()}}
                     <select name="abc" class="mySelect">
                     <option style="color: white" value="">Select A Teacher.</option>
                     <option style="color: white" value="1">Teacher 1</option>
@@ -138,14 +139,14 @@
                     <div class="field-wrap">
                         <br>
                         <label>
-                            Entire Stuff Name<span class="req">*</span>
+                            Entire Teacher Name<span class="req">*</span>
                         </label>
                         <input name="t_name" type="text" required autocomplete="off" maxlength="25"/>
                     </div>
 
                     <div class="field-wrap">
                         <br>
-                        <textarea name="about" type="text" rows="15" maxlength="995">
+                        <textarea name="info" type="text" rows="15" maxlength="995">
 
                         </textarea>
                     </div>

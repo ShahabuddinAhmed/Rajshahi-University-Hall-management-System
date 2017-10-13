@@ -8,7 +8,8 @@
 
 @section('body')
 
-	<form action="/" method="post">
+	<form action="/updatecontact" method="post">
+		{{csrf_field()}}
         <div class="field-wrap">
             <textarea name="info" type="text" rows="15" maxlength="995">
 

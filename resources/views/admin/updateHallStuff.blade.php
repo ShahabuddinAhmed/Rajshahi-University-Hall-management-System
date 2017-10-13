@@ -125,7 +125,8 @@
         <div class="form">
             <div class="tab-content"> 
                 <h1>Enter Stuff Information</h1>
-                <form action="UpdateHallStuffTm.php" method="post" name="UpdateHallStuff">
+                <form action="/updatehallstuff" method="post" name="UpdateHallStuff">
+                    {{csrf_field()}}
                     <select name="abcd" class="mySelect">
                         <option style="color: white" value="" >Select A Staff.</option>
                         <option style="color: white" value="1">Staff 1</option>
@@ -138,6 +139,7 @@
                         <option style="color: white" value="8">Staff 8</option>
                         <option style="color: white" value="9">Staff 9</option>
                         <option style="color: white" value="10">Staff 10</option>
+                    }
                 </select>
 
                     <div class="field-wrap">

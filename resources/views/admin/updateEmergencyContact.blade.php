@@ -122,9 +122,10 @@
             </ul>
             </div>
         <div class="form">
-            <div class="tab-content"> 
+            <div class="tab-content">
                 <h1>Enter Information</h1>
-                <form action="/" method="post">
+                <form action="/updateemergencycontact" method="post">
+                    {{csrf_field()}}
                     <select name="abc" class="mySelect">
                         <option  value="">Select A Name.</option>
                         <option  value="1">Name 1</option>
@@ -140,16 +141,22 @@
                         <label>
                             Entire a Name<span class="req">*</span>
                         </label>
-                        <input name="t_name" type="text" required autocomplete="off" maxlength="25"/>
+                        <input name="t_name" type="text"  maxlength="25"/>
                     </div>
                     <div class="field-wrap">
                         <label>
                             Entire Phone Number<span class="req">*</span>
                         </label>
-                        <input name="t_phon" type="text"required autocomplete="off" maxlength="25"/>
+                        <input name="t_phon" type= maxlength="25"/>
                     </div>
                     <button type="submit" class="button button-block"/>Submit</button>
                 </form>
+                @if(count($errors)>0)
+                    <div class="alert alert-warning"></div>
+                    @foreach($errors->all() as $error)
+                        {{$error}}
+                    @endforeach
+                @endif
             </div>
         </div> <!-- /form -->
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
