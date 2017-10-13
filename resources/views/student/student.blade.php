@@ -203,7 +203,7 @@
                     {{csrf_field()}}
                     <div class="field-wrap">
                         <br>
-                        <textarea name="info"  type="text" rows="15" maxlength="995">
+                        <textarea name="info"  type="text" rows="15">
 
                         </textarea>
                     </div>
