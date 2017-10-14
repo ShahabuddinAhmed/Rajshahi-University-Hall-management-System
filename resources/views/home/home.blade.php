@@ -44,10 +44,11 @@
 
                                 <div class="grid">
 
-                                    <form action="/" method="post" class="search">
+                                    <form action="/viewstudentinfo" method="post" class="search">
+                                        {{ csrf_field() }}
 
                                         <div class="form__field">
-                                            <input type="search" name="abs" placeholder="Entire Student ID" class="form__input">
+                                            <input type="search" name="id" placeholder="Entire Student ID" class="form__input">
                                             <input type="submit" name="abs1" value="Search" class="button">
                                         </div>
 

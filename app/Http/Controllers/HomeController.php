@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Information;
 use App\Notice;
+use App\StudentInfo;
 
 class HomeController extends Controller
 {
@@ -91,6 +92,14 @@ class HomeController extends Controller
     {
         return view('home.hallMosque');
     }
+
+    /*public function viewstudentinfo(Request $request)
+    {
+        $id = $request["id"];
+        $studentInfoes = StudentInfo::find($id);
+        return view('home.viewStudentInfo', compact('studentInfoes'));
+    }*/
+
 
 
 

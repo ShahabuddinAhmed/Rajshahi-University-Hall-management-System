@@ -27,6 +27,9 @@ Route::get('emergencycontact', 'HomeController@emergencyContact');
 Route::get('housetutor', 'HomeController@houseTutor');
 Route::get('hallstaff', 'HomeController@hallStaff');
 Route::get('hallmosque', 'HomeController@hallMosque');
+
+
+Route::post('viewstudentinfo', 'HomeController@viewStudentInfo');
 /* End All Routes for Home's Page */
 
 
